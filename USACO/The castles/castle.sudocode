@@ -1,0 +1,5 @@
+CHECK FOR NEHIBORS ( tile ):
+    nextTo = []
+    for i in range 4:
+        if tile[y][x][i] 
+            nextTo.add()

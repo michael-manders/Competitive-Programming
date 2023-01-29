@@ -1,0 +1,2 @@
+import re
+print(sum([1 for l in [[list(range(f[0], f[1] + 1)), list(range(f[2], f[3] + 1))] for f in [[int(l) for l in l] for l in [re.split("[,-]", l) for l in [l.replace("\n", '') for l in open("in.in").readlines()]]]] if len(list(set(l[0]).intersection(l[1]))) > 0]))

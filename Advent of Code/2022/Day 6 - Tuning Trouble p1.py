@@ -1,0 +1,1 @@
+print([set(list(open("in.in").read())[i:i+4]) for i in range(len(open("in.in").read()))].index([i for i in [set(list(open("in.in").read())[i:i+4]) for i in range(len(open("in.in").read()))] if len(i) == 4][0]) + 4)

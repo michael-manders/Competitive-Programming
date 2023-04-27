@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,300');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+/* TEMP - here's a key in case i forget it: "?key=thedarkestchocolate" */
+
+* {
+  margin:0;
+  padding:0;
+  outline:none;
+/*   list-style:none; */
+  text-decoration:none;
+  box-sizing:border-box;
+  color:#fff;
+  background: transparent;
+  border:none;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;  
+	margin-top: 5%;
+}
+
+body, footer {
+  background: #111;
+  font-family: 'Roboto', sans-serif;
+}
+
+.textglitch {
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 7vw;
+  font-weight: 700;
+  margin: 50px 0;
+  font-family: 'Share Tech Mono';
+}
+
+.textglitch .textglitch-link {
+  position: relative;
+  display: inline-block;
+}
+
+.textglitch-link span {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.head {
+  position: relative;
+  margin: 0 auto;
+  z-index: 1;
+  font-size: 3vw;
+  font-weight: 700;
+  margin: 50px 0;
+  color: #fff;
+  font-family: 'Dancing Script';
+}
+
+.head .head-cont {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-link {
+    color: pink;
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+.head-cont span {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.content {
+    font-size: 1.5vw;
+    margin-left: 5vw;
+    margin-right:5vw;
+    font-family: 'Roboto';
+}
+
+a {
+    color: pink;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.blur {
+/*   filter: blur(1px); */
+/*   -webkit-filter: blur(1px); */
+}
+
+.textglitch .textglitch-link:after,
+.textglitch .textglitch-link:before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  content: attr(data-content);
+  visibility: hidden;
+}
+
+.textglitch.active .textglitch-link:after,
+.textglitch.active .textglitch-link:before {
+  visibility: visible;
+}
+
+.textglitch .textglitch-link:before {
+  color: rgba(255, 0, 188, 0.5);
+/*   color: rgba(255,105,105,0.5); */
+  -webkit-animation: textglitch .3s cubic-bezier(.25, .46, .45, .94) both infinite;
+  animation: textglitch .3s cubic-bezier(.25, .46, .45, .94) both infinite;
+}
+
+
+.textglitch .textglitch-link:after {
+  color: rgba(0,255,255,0.5);
+/*   color: rgba(255,105,105,0.5) */
+  -webkit-animation: textglitch .3s cubic-bezier(.1, .2, .2, .4) reverse both infinite;
+  animation: textglitch .3s cubic-bezier(.25, .46, .45, .94) reverse both infinite;
+}
+
+@keyframes textglitch {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0)
+  }
+  20% {
+    -webkit-transform: translate(-3px, 3px);
+    transform: translate(-3px, 3px)
+  }
+  40% {
+    -webkit-transform: translate(-3px, -3px);
+    transform: translate(-3px, -3px)
+  }
+  60% {
+    -webkit-transform: translate(3px, 3px);
+    transform: translate(3px, 3px)
+  }
+  80% {
+    -webkit-transform: translate(3px, -3px);
+    transform: translate(3px, -3px)
+  }
+  to {
+    -webkit-transform: translate(0);
+    transform: translate(0)
+  }
+}

@@ -208,7 +208,8 @@ def detailed_view(screen):
 # -------------- MAIN LOOP --------------
 while True:
     if not page_state == last:
-        time.sleep(.1)
+        # time.sleep(.1)
+        pass
     last = page_state
     
     if first:
@@ -360,14 +361,12 @@ while True:
                     clicked = floors[clicked - 1 + 1*scroll_wheel]
                     page_state = 'detailed_view'
                     rended = False   
-
         case 'explaination':
             explaination(screen)
             if click[0]:
                 if mouse[0] > 400 and mouse[0] < 900 and mouse[1] > 700 and mouse[1] < 900:
                     page_state = 'transition'
                     rended = False
-
         case 'detailed_view':
             detailed_view(screen)
             # make the pie chart
@@ -375,6 +374,20 @@ while True:
                 keys = pcm.make_py_chart(clicked)
                 rended = True
             
+            # if up or ddown change the view in focus
+            for event in events:
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_DOWN:
+                        clicked = floors[floors.index(clicked) + 1]
+                        if clicked == 'F': clicked = 'E'
+                        
+                    if event.key == pygame.K_UP:
+                        clicked = floors[floors.index(clicked) - 1]
+                        if clicked == "Z": clicked = 'A'
+                    
+
+                    keys = pcm.make_py_chart(clicked)
+
             # load the piechart 
             piechart = pygame.image.load('./interface/images/piechart.png')
             piechart = pygame.transform.scale(piechart, (695, 700))

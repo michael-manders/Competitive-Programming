@@ -1,0 +1,7 @@
+print(input())
+print("Advanced")
+print("team55")
+print("Richardson High School")
+print("Michael Manders")
+print("Erick De La Cruz")
+print("Wilson Hincks")

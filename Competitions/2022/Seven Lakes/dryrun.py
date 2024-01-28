@@ -1,0 +1,5 @@
+print(sum([int(input()) for i in range(int(input()))]))
+print("Michael Manders, Gerardo Vega, Ben Le")
+print("Advanced")
+print("Richardson High School")
+print("Team 88")

@@ -1,0 +1,4 @@
+import re
+
+print(sum([10*int(re.findall("[\d]", x)[0]) + int(re.findall("[\d]", x)[-1]) for x in open("input.txt").read().strip().split("\n")]))
+print(sum([10*int(re.findall("[\d]", x)[0]) + int(re.findall("[\d]", x)[-1]) for x in open("input.txt").read().replace("twone", "21").replace("sevenine", "79").replace("oneight", "18").replace("threeight", "38").replace("nineight", "98").replace("fiveight", "58").replace("eighthree", "83").replace("eightwo", "82").replace("one", "1").replace("two", "2").replace("three", "3").replace("four", "4").replace("five", "5").replace("six", "6").replace("seven", "7").replace("eight", "8").replace("nine", "9").strip().split("\n")]))

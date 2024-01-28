@@ -1,0 +1,31 @@
+# unfinished solutions
+u_*.*
+
+# vim files
+*.*~
+*.swp
+
+# test files
+test.*
+rockyou.*
+
+# problem writing files
+writing/
+
+# executable/output/input files
+*.class
+*.exe
+*.out
+*.in
+
+# vs code
+*.code-workspace
+.vscode/
+
+# intellij folders
+.idea/
+out/
+*.iml
+
+# nodejs files
+*.node_modules

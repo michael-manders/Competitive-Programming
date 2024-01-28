@@ -1,0 +1,28 @@
+#statistics {
+    background-color: var(--background);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+
+#container {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 6rem;
+    position: fixed;
+}
+
+#row {
+    width: 96vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+}
